@@ -83,6 +83,6 @@ A entidade Usuário é especializada em Aluno e Administrador, permitindo que os
 Projeto acadêmico em desenvolvimento, com o modelo conceitual do banco de dados elaborado.
 
 ## 9. Autor
-João Gabriel
-Caio
+- João Gabriel
+- Caio
 Projeto desenvolvido para a disciplina de Banco de Dados I.
