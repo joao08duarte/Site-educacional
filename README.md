@@ -69,6 +69,10 @@ Armazena os materiais educacionais disponibilizados na plataforma, incluindo ide
 
 A entidade Usuário é especializada em Aluno e Administrador, permitindo que os dois tipos compartilhem os atributos gerais de usuário.
 
+### Imagem do modelo conceitual
+
+![Modelo Entidade-Relacionamento do Banco Escolar](mer-banco-escolar.png)
+
 ## 7. Tecnologias
 
 - Modelagem conceitual do banco de dados: brModelo 3.2.
