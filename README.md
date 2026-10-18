@@ -85,4 +85,3 @@ Projeto acadêmico em desenvolvimento, com o modelo conceitual do banco de dados
 ## 9. Autor
 - João Gabriel
 - Caio
-- Projeto desenvolvido para a disciplina de Banco de Dados I.
