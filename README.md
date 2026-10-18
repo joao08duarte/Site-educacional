@@ -71,6 +71,7 @@ A entidade Usuário é especializada em Aluno e Administrador, permitindo que os
 
 ### Imagem do modelo conceitual
 
+![Modelo Entidade-Relacionamento do Banco Escolar](mer-banco-escolar.png)
 
 
 ## 7. Tecnologias
