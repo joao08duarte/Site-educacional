@@ -53,7 +53,7 @@ Armazena as informações gerais dos usuários, incluindo identificador, nome, e
 Representa o usuário que acessa os níveis de ensino e consulta os conteúdos educacionais. Possui o atributo matrícula.
 
 ### Administrador
-Representa o usuário responsável pelo gerenciamento dos conteúdos da plataforma.
+Representa o usuário responsável pelo gerenciamento dos conteúdos da plataforma. Possui o atributo código_administrador
 
 ### Nível de Ensino
 Representa os níveis escolares disponibilizados pelo sistema, como Ensino Fundamental e Ensino Médio.
