@@ -23,24 +23,24 @@ Desenvolver um sistema web educacional que facilite o acesso a conteúdos escola
 - Organização dos conteúdos por nível de ensino e matéria.
 - Gerenciamento dos conteúdos pelos administradores.
 
-## 4. Requisitos funcionais
+## 4. Requisitos 
 
-- **RF01:** O sistema deve armazenar os dados dos usuários.
-- **RF02:** O sistema deve distinguir alunos e administradores.
-- **RF03:** O sistema deve permitir que os alunos acessem os níveis de ensino.
-- **RF04:** O sistema deve disponibilizar conteúdos educacionais associados aos níveis de ensino.
-- **RF05:** O sistema deve permitir a consulta dos conteúdos por matéria.
-- **RF06:** O sistema deve permitir que os administradores gerenciem os conteúdos.
+- **R01:** O sistema deve armazenar os dados dos usuários.
+- **R02:** O sistema deve distinguir alunos e administradores.
+- **R03:** O sistema deve permitir que os alunos acessem os níveis de ensino.
+- **R04:** O sistema deve disponibilizar conteúdos educacionais associados aos níveis de ensino.
+- **R05:** O sistema deve permitir a consulta dos conteúdos por matéria.
+- **R06:** O sistema deve permitir que os administradores gerenciem os conteúdos.
 
-## 5. Regras de negócio
+## 5. Regras
 
-- **RN01:** A plataforma será destinada à disponibilização de conteúdos do Ensino Fundamental e do Ensino Médio.
-- **RN02:** Os usuários serão classificados como alunos ou administradores.
-- **RN03:** Os alunos estarão relacionados aos níveis de ensino por meio do relacionamento Pertence.
-- **RN04:** Os níveis de ensino estarão relacionados aos conteúdos por meio do relacionamento Possui.
-- **RN05:** Cada conteúdo estará associado a um nível de ensino.
-- **RN06:** Os administradores serão responsáveis pelo gerenciamento dos conteúdos.
-- **RN07:** Os conteúdos terão título, descrição e matéria.
+- **R01:** A plataforma será destinada à disponibilização de conteúdos do Ensino Fundamental e do Ensino Médio.
+- **R02:** Os usuários serão classificados como alunos ou administradores.
+- **R03:** Os alunos estarão relacionados aos níveis de ensino por meio do relacionamento Pertence.
+- **R04:** Os níveis de ensino estarão relacionados aos conteúdos por meio do relacionamento Possui.
+- **R05:** Cada conteúdo estará associado a um nível de ensino.
+- **R06:** Os administradores serão responsáveis pelo gerenciamento dos conteúdos.
+- **R07:** Os conteúdos terão título, descrição e matéria.
 
 ## 6. Modelo Entidade-Relacionamento (MER)
 
