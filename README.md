@@ -5,9 +5,9 @@ Plataforma web educacional gratuita para consulta de conteúdos do Ensino Fundam
 
 ## 1. Sobre o projeto
 
-A Plataforma Educacional é um sistema web que tem como objetivo disponibilizar conteúdos escolares gratuitos para estudantes do Ensino Fundamental e do Ensino Médio.
+A Plataforma Educacional é um sistema web que tem como objetivo disponibilizar conteúdos escolares gratuitos do Ensino Fundamental e do Ensino Médio.
 
-O sistema permitirá que os alunos acessem os níveis de ensino e consultem conteúdos educacionais organizados por matéria, facilitando a busca por informações e materiais de estudo.
+O sistema permitirá que os usuários acessem os níveis de ensino e consultem conteúdos educacionais organizados por matéria, facilitando a busca por informações e materiais de estudo.
 
 A plataforma também contará com administradores responsáveis pelo gerenciamento dos conteúdos disponibilizados.
 
