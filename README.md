@@ -73,17 +73,108 @@ A entidade Usuário é especializada em Aluno e Administrador, permitindo que os
 
 ![Modelo Entidade-Relacionamento do Banco Escolar](mer-banco-escolar.png)
 
+## 7. Modelo Lógico/Relacional
 
-## 7. Tecnologias
+O modelo lógico foi derivado do MER e apresenta as tabelas, os atributos, os tipos de dados, as chaves primárias (PK), as chaves estrangeiras (FK) e as restrições de integridade do banco de dados.
+
+### Diagrama do modelo lógico
+
+![Modelo lógico da Plataforma Educacional](modelo-logico.png)
+
+### 1. Tabela USUARIO
+
+Armazena os dados dos usuários cadastrados na plataforma, permitindo identificar alunos e administradores.
+
+| Atributo | Tipo de dado | Restrições |
+|---|---|---|
+| `id_usuario` | INT | PK |
+| `nome` | VARCHAR(100) | NOT NULL |
+| `email` | VARCHAR(150) | NOT NULL, UNIQUE |
+| `senha` | VARCHAR(255) | NOT NULL |
+| `usuario_TIPO` | VARCHAR(20) | NOT NULL |
+| `codigo_administrador` | VARCHAR(50) | Opcional |
+| `Nivel_ensino_ID_nivel` | INT | FK |
+
+### 2. Tabela NIVEL_ENSINO
+
+Armazena os níveis de ensino disponibilizados pela plataforma.
+
+| Atributo | Tipo de dado | Restrições |
+|---|---|---|
+| `ID_nivel` | INT | PK |
+| `Nome` | VARCHAR(50) | NOT NULL |
+
+### 3. Tabela CONTEUDO
+
+Armazena os conteúdos educacionais disponibilizados aos usuários, incluindo título, descrição, matéria e o nível de ensino ao qual pertencem.
+
+| Atributo | Tipo de dado | Restrições |
+|---|---|---|
+| `ID_conteúdo` | INT | PK |
+| `Título` | VARCHAR(150) | NOT NULL |
+| `Descrição` | TEXT | NOT NULL |
+| `matéria` | VARCHAR(100) | NOT NULL |
+| `fk_Nivel_ensino_ID_nivel` | INT | FK |
+
+### 4. Tabela ADMIN_CONTEUDO_GERENCIA
+
+Registra o relacionamento entre os usuários administradores e os conteúdos que eles gerenciam.
+
+| Atributo | Tipo de dado | Restrições |
+|---|---|---|
+| `fk_Usuário_ID_usuário` | INT | PK, FK |
+| `fk_Conteúdo_ID_Conteúdo` | INT | PK, FK |
+
+A tabela `ADMIN_CONTEUDO_GERENCIA` utiliza uma chave primária composta pelas duas chaves estrangeiras, identificando cada associação entre um administrador e um conteúdo.
+
+## Chaves e relacionamentos
+
+- **USUARIO:** a chave primária `id_usuario` identifica cada usuário.
+- **NIVEL_ENSINO:** a chave primária `ID_nivel` identifica cada nível de ensino.
+- **CONTEUDO:** a chave primária `ID_conteúdo` identifica cada conteúdo. A chave estrangeira `fk_Nivel_ensino_ID_nivel` referencia `NIVEL_ENSINO.ID_nivel`.
+- **ADMIN_CONTEUDO_GERENCIA:** relaciona `USUARIO` e `CONTEUDO` por meio de suas chaves estrangeiras, permitindo registrar quais administradores gerenciam quais conteúdos.
+
+## Normalização
+
+### Primeira Forma Normal (1FN)
+
+Uma tabela está na 1FN quando cada atributo contém um único valor, sem listas ou grupos repetidos.
+
+No projeto, os atributos são separados em campos individuais, como o título, a descrição e a matéria de cada conteúdo.
+
+### Segunda Forma Normal (2FN)
+
+Uma tabela está na 2FN quando atende à 1FN e todos os atributos que não fazem parte de uma chave dependem da chave primária completa.
+
+Na tabela `ADMIN_CONTEUDO_GERENCIA`, a chave primária é composta por duas chaves estrangeiras. Como não existem outros atributos nessa tabela, não há atributos não-chave com dependências parciais a verificar.
+
+### Terceira Forma Normal (3FN)
+
+Uma tabela está na 3FN quando atende à 2FN e não possui dependências transitivas indevidas entre atributos que não são chaves.
+
+A separação entre `NIVEL_ENSINO` e `CONTEUDO` permite armazenar os nomes dos níveis de ensino em uma tabela própria e relacioná-los aos conteúdos por meio de uma chave estrangeira.
+
+A confirmação de que todas as tabelas atendem à 3FN depende da análise das dependências funcionais dos atributos do modelo final.
+
+## Integridade dos dados
+
+As chaves primárias identificam os registros de forma única, enquanto as chaves estrangeiras estabelecem os relacionamentos entre as tabelas.
+
+As restrições `NOT NULL` indicam atributos obrigatórios, e `UNIQUE` impede a repetição de valores no e-mail dos usuários.
+
+
+
+
+## 8. Tecnologias
 
 - Modelagem conceitual do banco de dados: brModelo 3.2.
 - Sistema web e banco de dados: a definir.
 
-## 8. Status do projeto
+## 9. Status do projeto
 
-Projeto acadêmico em desenvolvimento, com o modelo conceitual do banco de dados elaborado.
+Projeto acadêmico em desenvolvimento, com o modelo conceitual e modelo lógico do banco de dados elaborado.
 
-## 9. Autores
+## 10. Autores
 
 - João Gabriel
 - Caio
