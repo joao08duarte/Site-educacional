@@ -154,8 +154,6 @@ Uma tabela está na 3FN quando atende à 2FN e não possui dependências transit
 
 A separação entre `NIVEL_ENSINO` e `CONTEUDO` permite armazenar os nomes dos níveis de ensino em uma tabela própria e relacioná-los aos conteúdos por meio de uma chave estrangeira.
 
-A confirmação de que todas as tabelas atendem à 3FN depende da análise das dependências funcionais dos atributos do modelo final.
-
 ## Integridade dos dados
 
 As chaves primárias identificam os registros de forma única, enquanto as chaves estrangeiras estabelecem os relacionamentos entre as tabelas.
