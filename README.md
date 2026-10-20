@@ -89,7 +89,7 @@ Armazena os dados dos usuários cadastrados na plataforma, permitindo identifica
 |---|---|---|
 | `id_usuario` | INT | PK |
 | `nome` | VARCHAR(100) | NOT NULL |
-| `email` | VARCHAR(150) | NOT NULL |
+| `email` | VARCHAR(150) | NOT NULL, UNIQUE |
 | `senha` | VARCHAR(255) | NOT NULL |
 | `usuario_TIPO` | VARCHAR(20) | NOT NULL |
 | `codigo_administrador` | VARCHAR(50) | Opcional |
